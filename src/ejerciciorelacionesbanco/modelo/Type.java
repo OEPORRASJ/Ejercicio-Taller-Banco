@@ -1,20 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ejerciciorelacionesbanco.modelo;
 
-/**
- *
- * @author Estudiante
- */
+
 public class Type {
     private String code;
-
+    
+    //Constructor Vacío
+    public Type(){}
+    
+    //Constructor
     public Type(String code) {
         this.code = code;
     }
+
+    //Get y Set
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+    
+    //Métodos
+    
+    
     
    
     

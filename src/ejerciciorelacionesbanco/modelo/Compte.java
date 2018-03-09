@@ -1,36 +1,67 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ejerciciorelacionesbanco.modelo;
 
-/**
- *
- * @author Estudiante
- */
+import java.util.ArrayList;
+import java.util.Date;
+
+
+
+
 public class Compte {
     private int numeroCompte;
     private double soldeCourant;
-    private String dateCreation;
+    private Date dateCreation;
     private String nomClient;
     
-    private Mouvement[] mouvements = null;
+  
+    //Composición
+    private ArrayList<Mouvement> mouvements = new ArrayList<Mouvement>();
+    
+    
+       
+    public void setMouvement(Mouvement mouvement){
+        mouvements.add(mouvement);
+    }
+    
+    //Compte
 
-    public Compte(){
-       this.mouvements = new Mouvement[20];
+    public Compte(int numeroCompte, double soldeCourant, Date dateCreation, String nomClient) {
+        this.numeroCompte = numeroCompte;
+        this.soldeCourant = soldeCourant;
+        this.dateCreation = dateCreation;
+        this.nomClient = nomClient;
     }
-    
-    
-    //public boolean addMoAge(Movimiento m){
-      // this.mouvements[?]= m;
-    //}
-    
-    //comp
-    public boolean addMo(Type t, double monto, ..){
-        Movimiento m = new Mouvement(t, monto, ...);
-        this.mouvements[?]= m;
+
+    public int getNumeroCompte() {
+        return numeroCompte;
     }
-    
+
+    public void setNumeroCompte(int numeroCompte) {
+        this.numeroCompte = numeroCompte;
+    }
+
+    public double getSoldeCourant() {
+        return soldeCourant;
+    }
+
+    public void setSoldeCourant(double soldeCourant) {
+        this.soldeCourant = soldeCourant;
+    }
+
+    public Date getDateCreation() {
+        return dateCreation;
+    }
+
+    public void setDateCreation(Date dateCreation) {
+        this.dateCreation = dateCreation;
+    }
+
+    public String getNomClient() {
+        return nomClient;
+    }
+
+    public void setNomClient(String nomClient) {
+        this.nomClient = nomClient;
+    }
     
 }
